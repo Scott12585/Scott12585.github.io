@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Embedded Google Sheet</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+        }
+        .sheet-container {
+            width: 100%;
+            max-width: 800px;
+            overflow-x: auto;
+            -webkit-overflow-scrolling: touch; /* enable smooth scrolling on iOS */
+        }
+        iframe {
+            width: 100%;
+            min-height: 600px;
+            border: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="sheet-container">
+        <iframe src="https://docs.google.com/spreadsheets/d/e/11lGymWUKkBVr1UKjsdUNKSsMw2O9NGDpJVU6_6IaFHs/pubhtml?gid=0&single=true&widget=true&headers=false" 
+            title="Embedded Google Sheet">
+        </iframe>
+    </div>
+</body>
+</html>
