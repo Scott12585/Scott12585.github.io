@@ -3,35 +3,66 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Embedded Google Sheet</title>
+    <title>March Madness Tournament - Round of 64</title>
     <style>
-        body {
+        * {
             margin: 0;
             padding: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            background-color: #f0f0f0;
+            box-sizing: border-box;
         }
-        .sheet-container {
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            padding: 10px;
+        }
+        .container {
+            max-width: 100%;
+            margin: 0 auto;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            padding: 20px;
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 20px;
+            font-size: 24px;
+        }
+        .sheet-wrapper {
             width: 100%;
-            max-width: 800px;
             overflow-x: auto;
-            -webkit-overflow-scrolling: touch; /* enable smooth scrolling on iOS */
+            -webkit-overflow-scrolling: touch;
+            border: 1px solid #ddd;
+            border-radius: 4px;
         }
         iframe {
             width: 100%;
             min-height: 600px;
-            border: 0;
+            border: none;
+            display: block;
+        }
+        @media (max-width: 768px) {
+            .container {
+                padding: 10px;
+            }
+            h1 {
+                font-size: 20px;
+            }
+            iframe {
+                min-height: 500px;
+            }
         }
     </style>
 </head>
 <body>
-    <div class="sheet-container">
-        <iframe src="https://docs.google.com/spreadsheets/d/11lGymWUKkBVr1UKjsdUNKSsMw2O9NGDpJVU6_6IaFHs/pubhtml?gid=0&single=true&widget=true&headers=false" 
-            title="Embedded Google Sheet">
-        </iframe>
+    <div class="container">
+        <h1>🏀 March Madness Tournament - Round of 64</h1>
+        <div class="sheet-wrapper">
+            <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSthrjc9XLQixxx4v1DzntakmFI-03qrf1CjT9nUrOoKrzYceSVx_moZoDhir7-ezZPNJfug9xKkxfL/pubhtml?gid=451455090&single=true&widget=true&headers=false" 
+                title="March Madness Tournament Bracket">
+            </iframe>
+        </div>
     </div>
 </body>
 </html>
